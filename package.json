@@ -1,11 +1,10 @@
 {
   "name": "parcel-project-template",
-  "source": "src/index.html",
   "version": "2.0.0",
-  "description": "**Read in other languages: [Русский](README.md), [Polski](README.pl.md).**",
+  "description": "",
   "homepage": "https://yurov-37.github.io/goit-js-hw-08",
   "scripts": {
-    "dev": "parcel src/*.html",
+    "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
   },
   "repository": {
