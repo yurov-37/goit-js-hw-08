@@ -13,13 +13,22 @@ const imagesMarkup = createImageCardsMarkup(galleryItems);
 imageGallery.insertAdjacentHTML('beforeend', imagesMarkup);
 
 function createImageCardsMarkup(items) {
-  return items
-    .map(({ preview, original, description }) => {
-      return `<a class="gallery__item" href="${original}">
-    <img class="gallery__image" src="${preview}" alt="${description}" />
-  </a>`;
-    })
-    .join('');
+  // return items
+  //   .map(({ preview, original, description }) => {
+  //     return `<a class="gallery__item" href="${original}">
+  //   <img class="gallery__image" src="${preview}" alt="${description}" />
+  // </a>`;
+  //   })
+  //   .join('');
+
+  return items.reduce(
+    (markup, { preview, original, description }) =>
+      markup +
+      `<a class="gallery__item" href="${original}">
+     <img class="gallery__image" src="${preview}" alt="${description}" />
+   </a>`,
+    ''
+  );
 }
 
 new SimpleLightbox('.gallery a', {
